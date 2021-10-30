@@ -1,0 +1,56 @@
+name: Go
+
+on:
+  push:
+    branches: [ ci_test ]
+  pull_request:
+    branches: [ ci_test ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Git Version
+      id: git-version
+      uses: codacy/git-version@2.2.0
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v1
+    - name: Login to DockerHub
+      uses: docker/login-action@v1 
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Envs
+      id: env_step
+      run: |
+          echo VERSION_TAG=${{steps.git-version.outputs.VERSION}} >> $GITHUB_ENV
+          echo LASTEST_TAG=${{steps.git-version.outputs.VERSION}} >> $GITHUB_ENV
+          echo "##[set-output name=scrapper_name;]PACK_SRV=house_scrapper"
+          echo "##[set-output name=worker_name;]PACK_SRV=house_worker"
+    - name: BuildWorker
+      uses: docker/build-push-action@v2
+      with:
+        file: ./Dockerfile
+        push: true
+        tags: |
+          ${{env.VERSION_TAG}}
+          ${{env.LASTEST_TAG}}
+        build-args: |
+          ${{steps.env_step.outputs.worker_name}}
+    - name: BuildScrapper
+      uses: docker/build-push-action@v2
+      with:
+        file: ./Dockerfile
+        push: true
+        tags: |
+          ${{env.VERSION_TAG}}
+          ${{env.LASTEST_TAG}}
+        build-args: |
+          ${{steps.env_step.outputs.scrapper_name}}
