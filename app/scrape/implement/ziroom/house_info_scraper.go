@@ -8,19 +8,19 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SuperSleepyU/house/app/common/model/statistic"
+	"github.com/abyss414/house/app/common/model/statistic"
 
-	"github.com/SuperSleepyU/house/app/scrape/metrics"
+	"github.com/abyss414/house/app/scrape/metrics"
 
-	"github.com/SuperSleepyU/house/app/common/connector"
+	"github.com/abyss414/house/app/common/connector"
 
 	"github.com/go-resty/resty/v2"
 
 	"golang.org/x/net/html"
 
-	"github.com/SuperSleepyU/house/app/common/model/db"
+	"github.com/abyss414/house/app/common/model/db"
 
-	"github.com/SuperSleepyU/house/app/common/log"
+	"github.com/abyss414/house/app/common/log"
 	"github.com/gocolly/colly/v2"
 )
 

@@ -3,12 +3,12 @@ package woaiwojia
 import (
 	"context"
 
-	"github.com/SuperSleepyU/house/app/common/log"
+	"github.com/abyss414/house/app/common/log"
 
-	"github.com/SuperSleepyU/house/app/common/dal"
-	"github.com/SuperSleepyU/house/app/common/errors"
+	"github.com/abyss414/house/app/common/dal"
+	"github.com/abyss414/house/app/common/errors"
 
-	"github.com/SuperSleepyU/house/app/common/model/db"
+	"github.com/abyss414/house/app/common/model/db"
 )
 
 type executeFunc func(ctx context.Context, detail *db.ErShouFangDetail) error

@@ -6,13 +6,13 @@ import (
 	"log"
 	"sync"
 
-	"github.com/SuperSleepyU/house/app/scanner/price_day_timestamp"
+	"github.com/abyss414/house/app/scanner/price_day_timestamp"
 
-	"github.com/SuperSleepyU/house/app/common/config"
-	"github.com/SuperSleepyU/house/app/common/connector"
-	"github.com/SuperSleepyU/house/app/common/tracing"
-	"github.com/SuperSleepyU/house/app/scanner/unit_price"
-	"github.com/SuperSleepyU/house/app/scanner/xiaoqu_position"
+	"github.com/abyss414/house/app/common/config"
+	"github.com/abyss414/house/app/common/connector"
+	"github.com/abyss414/house/app/common/tracing"
+	"github.com/abyss414/house/app/scanner/unit_price"
+	"github.com/abyss414/house/app/scanner/xiaoqu_position"
 )
 
 func main() {

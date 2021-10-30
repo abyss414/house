@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/SuperSleepyU/house/app/common/log"
+	"github.com/abyss414/house/app/common/log"
 
 	"github.com/go-resty/resty/v2"
 )

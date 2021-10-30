@@ -5,8 +5,8 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/SuperSleepyU/house/app/common/connector"
-	"github.com/SuperSleepyU/house/app/common/model/db"
+	"github.com/abyss414/house/app/common/connector"
+	"github.com/abyss414/house/app/common/model/db"
 )
 
 type XiaoQuPositionDBAccess struct {

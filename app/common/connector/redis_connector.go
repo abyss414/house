@@ -1,7 +1,7 @@
 package connector
 
 import (
-	"github.com/SuperSleepyU/house/app/common/config"
+	"github.com/abyss414/house/app/common/config"
 	"github.com/piaohao/godis"
 )
 

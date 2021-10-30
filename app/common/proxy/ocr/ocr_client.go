@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/SuperSleepyU/house/app/common/config"
+	"github.com/abyss414/house/app/common/config"
 	"github.com/go-resty/resty/v2"
 )
 

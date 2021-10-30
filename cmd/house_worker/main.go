@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/SuperSleepyU/house/app/common/constant"
-	"github.com/SuperSleepyU/house/app/common/tracing"
-	"github.com/SuperSleepyU/house/app/scrape/framework"
+	"github.com/abyss414/house/app/common/constant"
+	"github.com/abyss414/house/app/common/tracing"
+	"github.com/abyss414/house/app/scrape/framework"
 
-	"github.com/SuperSleepyU/house/app/common/config"
-	"github.com/SuperSleepyU/house/app/common/connector"
+	"github.com/abyss414/house/app/common/config"
+	"github.com/abyss414/house/app/common/connector"
 )
 
 func main() {

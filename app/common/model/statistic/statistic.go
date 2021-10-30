@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/SuperSleepyU/house/app/common/connector"
+	"github.com/abyss414/house/app/common/connector"
 )
 
 type ScrapeStat struct {
